@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+
+.login-page-container {
+  display: flex;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #e0eafc, #cfdef3);
+
+}
+
+/* Left: Form */
+.login-form-side {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+}
+
+/* Right: Image / Video */
+.login-image-side {
+  flex: 1;
+  background: url('https://t4.ftcdn.net/jpg/09/01/73/65/240_F_901736524_934vnNKgpwDSdckFw5MMMHBazkxlTAze.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.login-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(52, 73, 94, 0.5); /* sleek dark overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeInRight 1s ease forwards;
+}
+
+.login-side-text {
+  color: #ffffff;
+  font-size: 2.8rem;
+  font-weight: 600;
+  text-align: center;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+  letter-spacing: 1px;
+}
+
+/* Animations */
+@keyframes fadeInRight {
+  0% { opacity: 0; transform: translateX(50px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+/* Form Paper */
+.MuiPaper-root {
+  border-radius: 20px !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(12px);
+  box-shadow: 0px 12px 35px rgba(0,0,0,0.12) !important;
+  transition: transform 0.3s ease-in-out;
+}
+
+.MuiPaper-root:hover {
+  transform: translateY(-6px);
+}
+
+/* Input Fields */
+.MuiTextField-root input {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.MuiOutlinedInput-root.Mui-focused fieldset {
+  border-color: #2980b9 !important;
+  box-shadow: 0px 0px 6px rgba(41, 128, 185, 0.4);
+}
+
+/* Submit Button */
+.MuiButton-contained {
+  background: linear-gradient(135deg, #3498db, #2980b9) !important;
+  color: white !important;
+  font-weight: 600 !important;
+  padding: 12px;
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+}
+
+.MuiButton-contained:hover {
+  background: linear-gradient(135deg, #2980b9, #1f6391) !important;
+  transform: scale(1.03);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .login-page-container {
+    flex-direction: column;
+  }
+  .login-image-side {
+    height: 220px;
+  }
+  .login-side-text {
+    font-size: 2rem;
+  }
+}

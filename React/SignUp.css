@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+
+.signup-page-container {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh; /* ensures full viewport height */
+  font-family: 'Dancing Script', cursive;
+  background: linear-gradient(135deg, #e3d5ff 0%, #fcd6ff 100%);
+}
+
+/* Left: Form */
+.signup-form-side {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem; /* adds spacing on small screens */
+  z-index: 2;
+  animation: fadeInLeft 1s ease forwards;
+  box-sizing: border-box; /* important for padding */
+}
+
+/* Form styling */
+.signup-paper {
+  width: 100%;
+  max-width: 450px;
+  padding: 2.5rem 2rem;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.3); /* slightly higher opacity */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+/* Title */
+.signup-title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #0a0a0a;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Inputs */
+.signup-textfield {
+  background: rgba(255, 255, 255, 0.5); /* more visible */
+  border-radius: 12px;
+  padding: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+/* Button */
+.signup-button {
+  background: linear-gradient(135deg, #7E57C2, #9575CD);
+  color: #fff;
+  font-weight: bold;
+  padding: 1rem;
+  font-size: 1.1rem;
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.signup-button:hover {
+  background: linear-gradient(135deg, #5E35B1, #7E57C2);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Right: Image / Video */
+.signup-image-side {
+  flex: 1;
+  background: url('https://t3.ftcdn.net/jpg/13/20/60/46/240_F_1320604642_fY5XYBeFg2ZSbVpZNruLD4t2Ff6zMdT9.jpg') no-repeat center center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh; /* ensures full height on reload */
+}
+
+/* Overlay text */
+.signup-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeInRight 1s ease forwards;
+}
+
+.signup-side-text {
+  color: white;
+  font-size: 2.5rem;
+  text-align: center;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* Animations */
+@keyframes fadeInLeft {
+  0% { opacity: 0; transform: translateX(-50px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+  0% { opacity: 0; transform: translateX(50px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .signup-page-container {
+    flex-direction: column;
+  }
+  .signup-image-side {
+    height: 250px;
+  }
+  .signup-side-text {
+    font-size: 2rem;
+  }
+  .signup-form-side {
+    padding: 1.5rem; /* more spacing for small screens */
+  }
+}
+.signup-footer{
+  color: #0a0a0a;
+}

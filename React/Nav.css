@@ -1,0 +1,156 @@
+/* === Navbar === */
+.navbar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 50px;
+  height: 180px; /* increase height to show image properly */
+  /* background-image: url("https://images.pexels.com/photos/635279/pexels-photo-635279.jpeg?cs=srgb&dl=pexels-bella-white-201200-635279.jpg&fm=jpg"); */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 0 0 25px 25px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+  color: #fff;
+  z-index: 1000;
+  overflow: hidden; /* prevent border-radius clipping image */
+}
+
+
+/* Logo */
+.logo {
+  font-weight: 800;
+  font-size: 28px;
+  color: #fff;
+  letter-spacing: 1px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+/* Search bar */
+.search-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background: rgba(0,0,0,0.4);
+  padding: 10px 20px;
+  border-radius: 30px;
+  color: #fff;
+  margin: 0 20px;
+}
+
+.search-container input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 15px;
+  background: transparent;
+  color: #fff;
+}
+
+.search-container .search-icon {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+/* Navbar buttons */
+.navbar-buttons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.create-btn, .knowledge-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.create-btn {
+  background: #ff6f91;
+  color: #fff;
+}
+
+.create-btn:hover {
+  transform: scale(1.05);
+  background: #ff85a2;
+}
+
+.knowledge-btn {
+  background: #6a4c93;
+  color: #fff;
+}
+
+.knowledge-btn:hover {
+  transform: scale(1.05);
+  background: #7b5ea1;
+}
+
+/* Navbar right icons */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  color: #fff;
+}
+
+.navbar-right .notification-icon,
+.navbar-right .profile-section {
+  position: relative;
+  font-size: 22px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.navbar-right .notification-icon:hover,
+.navbar-right .profile-section:hover {
+  transform: scale(1.2);
+  color: #ffde59;
+}
+
+/* Notification badge */
+.notification-badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: #ff3366;
+  color: white;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+/* Profile dropdown */
+.profile-dropdown {
+  position: absolute;
+  right: 0;
+  top: 35px;
+  background: rgba(255,255,255,0.95);
+  color: #4a148c;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  padding: 10px;
+  min-width: 140px;
+  z-index: 100;
+}
+
+.profile-dropdown p {
+  margin: 0;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.profile-dropdown p:hover {
+  background-color: #e1bee7;
+  border-radius: 5px;
+}
